@@ -56,6 +56,11 @@ build/client/build: node_modules/unofficial-hypothesis/build/manifest.json
 	@# We can't leave the client manifest in the build or the Chrome Web Store
 	@# will complain.
 	rm $@/manifest.json
+	@# Add a serializable expression as the last statement in the boot script
+	@# bundle, otherwise Firefox will complain if attempting to execute the Browserify
+	@# bundle that the "Script returned non-structured-clonable data"
+	echo "null" >> build/client/build/boot.js
+
 build/client/app.html: src/sidebar-app.html.mustache build/client build/.settings.json
 	tools/template-context-app.js build/.settings.json | $(MUSTACHE) - $< >$@
 build/settings-data.js: src/settings-data.js.mustache build/client build/.settings.json
