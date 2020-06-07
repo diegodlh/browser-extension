@@ -1,5 +1,6 @@
 {
   "buildType": "production",
+  "id": "{7dc760e7-5cc5-4e76-8468-18b2b003f22a}",
 
   "apiUrl": "https://hypothes.is/api/",
   "authDomain": "hypothes.is",
