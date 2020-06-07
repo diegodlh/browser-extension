@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "{7dc760e7-5cc5-4e76-8468-18b2b003f22a}": {
+      "updates": [
+        {
+          "version": "1.441.0.8",
+          "update_link": "https://github.com/diegodlh/browser-extension/releases/download/v1.441.0.8/unofficial_hypothesis_extension-1.441.0.8-fx.xpi"
+        }
+     ]
+    }
+  }
+}
