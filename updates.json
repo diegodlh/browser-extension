@@ -5,6 +5,10 @@
         {
           "version": "1.441.0.8",
           "update_link": "https://github.com/diegodlh/browser-extension/releases/download/v1.441.0.8/unofficial_hypothesis_extension-1.441.0.8-fx.xpi"
+        },
+        {
+          "version": "1.441.0.9",
+          "update_link": "https://github.com/diegodlh/browser-extension/releases/download/v1.441.0.9/unofficial_hypothesis_extension-1.441.0.9-fx.xpi"
         }
      ]
     }
