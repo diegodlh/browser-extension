@@ -33,7 +33,7 @@ function getVersion(buildType) {
     throw new Error('cannot create production build with dirty git state!');
   }
 
-  const version = `${gitInfo.tag}`;
+  const version = `${gitInfo.tag.substr(1)}`;
   let versionName = 'Unofficial Build';
 
   if (buildType !== 'production') {
