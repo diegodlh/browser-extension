@@ -7,6 +7,11 @@ Its main purpose is to provide a working extension for the Firefox browser. See 
 
 To install on your Firefox browser, download the latest xpi file from [here](https://github.com/diegodlh/browser-extension/releases/latest).
 
+Known bugs
+-----------
+
+* Annotating local PDFs is not supported because Firefox is more restrictive than Chrome regarding extension access to local files. See issue [#100](https://github.com/hypothesis/browser-extension/issues/100).
+
 Development
 -----------
 
