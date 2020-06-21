@@ -6,7 +6,7 @@ Unofficial Hypothesis extension
 
 <!-- [travis]: https://travis-ci.org/hypothesis/browser-extension
 [irc]: https://www.irccloud.com/invite?channel=%23hypothes.is&amp;hostname=irc.freenode.net&amp;port=6667&amp;ssl=1 -->
-[license]: https://github.com/diegodlh/unofficial-browser-extension/blob/master/LICENSE
+[license]: https://github.com/diegodlh/unofficial-hypothesis-extension/blob/master/LICENSE
 
 The *unofficial* Hypothesis extension allows you to annotate web documents using your
 [Hypothesis][service] account.
