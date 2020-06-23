@@ -58,7 +58,17 @@
     "tabs",
     "identity"
   ],
+
+  {{#browserIsChrome}}
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'; font-src 'self' data:;",
+  {{/browserIsChrome}}
+
+  {{! Injecting remote scripts is incompatible with Mozilla's review policies.
+      See https://blog.mozilla.org/addons/2016/05/31/using-google-analytics-in-extensions/
+  }}
+  {{#browserIsFirefox}}
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; font-src 'self' data:;",
+  {{/browserIsFirefox}}
 
   "background": {
     {{#browserIsChrome}}
