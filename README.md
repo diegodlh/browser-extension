@@ -6,7 +6,7 @@ Unofficial Hypothesis extension
 
 <!-- [travis]: https://travis-ci.org/hypothesis/browser-extension
 [irc]: https://www.irccloud.com/invite?channel=%23hypothes.is&amp;hostname=irc.freenode.net&amp;port=6667&amp;ssl=1 -->
-[license]: https://github.com/diegodlh/unofficial-browser-extension/blob/master/LICENSE
+[license]: https://github.com/diegodlh/unofficial-hypothesis-extension/blob/master/LICENSE
 
 The *unofficial* Hypothesis extension allows you to annotate web documents using your
 [Hypothesis][service] account.
@@ -14,7 +14,7 @@ The *unofficial* Hypothesis extension allows you to annotate web documents using
 It is a fork of the *official* [Hypothesis browser extension(s)](https://github.com/hypothesis/browser-extension).
 Its main purpose is to provide a working extension for the Firefox browser. See this [thread](https://github.com/hypothesis/browser-extension/issues/310) for more details.
 
-To install on your Firefox browser, download the latest xpi file from [here](https://github.com/diegodlh/unofficial-browser-extension/releases/latest).
+To install on your Firefox browser, download the latest xpi file from [here](https://github.com/diegodlh/unofficial-hypothesis-extension/releases/latest).
 
 ![Screenshot of Hypothesis client](/images/screenshot.png?raw=true)
 
