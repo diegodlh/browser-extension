@@ -37,6 +37,9 @@ browser extension by running:
 Once this is done you should be able to load the `build/` directory as an
 unpacked extension.
 
+Use `settings/firefox-prod-self.json` for self distribution, instead of distribution through AMO (addons.mozilla.org).
+This includes the update_url field in the manifest.json file to handle automatic updates of the self distributed extension.
+
 The extension code has a test suite, which you can run using:
 
     npm test

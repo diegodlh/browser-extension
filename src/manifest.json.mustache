@@ -20,8 +20,10 @@
       {{#id}}
       "id": "{{{ id }}}",
       {{/id}}
-      "strict_min_version": "68.0",
+      {{#selfDistribution}}
       "update_url": "https://raw.githubusercontent.com/diegodlh/browser-extension/master/updates.json"
+      {{/selfDistribution}}
+      "strict_min_version": "68.0"
     }
   },
   {{/browserIsFirefox}}
