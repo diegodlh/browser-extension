@@ -33,10 +33,13 @@ find $DEST_DIR/ -name '*.map' -delete
 
 # Remove the check that the PDF being loaded is from the same origin as the
 # viewer.
-sed -i '' -e 's/HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)/true \/* Hypothesis *\//' $DEST_DIR/web/viewer.js
+sed -i.bak -e 's/HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)/true \/* Hypothesis *\//' $DEST_DIR/web/viewer.js
 
 # Modify the viewer HTML page to load the Hypothesis client.
-sed -i '' -e 's/<\/head>/<script src="\/pdfjs-init.js"><\/script><\/head>/' $DEST_DIR/web/viewer.html
+sed -i.bak -e 's/<\/head>/<script src="\/pdfjs-init.js"><\/script><\/head>/' $DEST_DIR/web/viewer.html
+
+# Remove backup files created by sed
+rm $DEST_DIR/web/*.bak
 
 # Add a README to make it super-obvious that $DEST_DIR contains generated files which
 # should not be manually edited.
