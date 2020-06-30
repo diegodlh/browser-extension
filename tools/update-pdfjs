@@ -5,17 +5,32 @@ set -eu
 # This script fetches the latest build of PDF.js from the viewer demo
 # page.
 #
-# See https://github.com/mozilla/pdf.js/wiki/Setup-pdf.js-in-a-website#from-examples
+# See https://github.com/mozilla/pdf.js/wiki/Setup-pdf.js-in-a-website#examples
 #
 # To update PDF.js to the latest version:
 #
 # 1. Create a new branch and run this script.
 # 2. Rebuild the extension and verify that PDFs work as expected in Chrome
 # 3. Commit the changes to the `src/vendor/` directory
+#
+# Use `--es5` parameter for support with older browsers
+#
+# See https://github.com/mozilla/pdf.js#online-demo
 
 DEST_DIR=src/vendor/pdfjs
 PREFIX=pdf.js-gh-pages
-COMPONENTS="$PREFIX/build $PREFIX/web $PREFIX/LICENSE"
+ES5=false
+
+if [ "${1:-}" = "--es5" ]; then
+	ES5=true
+fi
+
+if [ $ES5 = true ]
+then
+	COMPONENTS="$PREFIX/es5"
+else
+	COMPONENTS="$PREFIX/build $PREFIX/web $PREFIX/LICENSE"
+fi
 
 # Download the latest version of the PDF.js library and viewer.
 rm -rf $DEST_DIR
@@ -24,6 +39,12 @@ mkdir -p $DEST_DIR
 # Get the latest build of the viewer
 curl -L https://github.com/mozilla/pdf.js/archive/gh-pages.tar.gz \
   | tar -xz --directory $DEST_DIR --strip-components=1 $COMPONENTS
+
+if [ $ES5 = true ]
+then
+	mv $DEST_DIR/es5/* $DEST_DIR/
+	rm -rf $DEST_DIR/es5
+fi
 
 # Remove example content from viewer
 rm $DEST_DIR/web/*.pdf
