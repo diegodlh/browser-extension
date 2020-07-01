@@ -36,7 +36,7 @@ function getVersion(buildType, selfDistribution) {
   let version = `${gitInfo.tag.substr(1)}`;
 
   if (selfDistribution) {
-    version = version + '-self';
+    version = version + 'self';
   }
 
   let versionName = 'Unofficial Build';
