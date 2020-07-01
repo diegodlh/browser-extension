@@ -26,14 +26,19 @@ process.stdout.on('error', err => {
  *   otherwise set it to a string of the form "gXXXXXXX[.dirty]" to reflect the
  *   exact commit and state of the repository.
  */
-function getVersion(buildType) {
+function getVersion(buildType, selfDistribution) {
   const gitInfo = gitDescribeSync();
 
   if (buildType === 'production' && gitInfo.dirty) {
     throw new Error('cannot create production build with dirty git state!');
   }
 
-  const version = `${gitInfo.tag.substr(1)}`;
+  let version = `${gitInfo.tag.substr(1)}`;
+
+  if (selfDistribution) {
+    version = version + '-self';
+  }
+
   let versionName = 'Unofficial Build';
 
   if (buildType !== 'production') {
@@ -49,6 +54,6 @@ if (process.argv.length !== 3) {
 }
 
 const settings = require(path.join(process.cwd(), process.argv[2]));
-const settingsOut = Object.assign({}, settings, getVersion(settings.buildType));
+const settingsOut = Object.assign({}, settings, getVersion(settings.buildType, settings.selfDistribution));
 
 console.log(JSON.stringify(settingsOut));
