@@ -32,7 +32,7 @@ The code for the extensions is in the `src/` directory, and can be built into a
 browser extension by running:
 
     npm install
-    make SETTINGS_FILE=settings/firefox-prod.json
+    make SETTINGS_FILE=settings/firefox-prod-amo.json
 
 Once this is done you should be able to load the `build/` directory as an
 unpacked extension.
