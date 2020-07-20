@@ -21,7 +21,11 @@
         {
           "version": "1.441.0.15",
           "update_link": "https://github.com/diegodlh/unofficial-hypothesis-extension/releases/download/v1.441.0.15/unofficial_hypothesis_extension-1.441.0.15self-fx.xpi"
-        }
+        },
+        {
+          "version": "1.470.0.0",
+          "update_link": "https://github.com/diegodlh/unofficial-hypothesis-extension/releases/download/v1.470.0.0/unofficial_hypothesis_extension-1.470.0.0self-fx.xpi"
+        }        
      ]
     }
   }
