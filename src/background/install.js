@@ -19,6 +19,12 @@ export function init() {
   });
 
   browserExtension.listen(window);
+
+  chrome.contextMenus.create({
+      title: "Settings",
+      contexts: ["browser_action"],
+      onclick: () => chrome.runtime.openOptionsPage()
+  });
 }
 
 if (!chrome.isFakeChrome) {
