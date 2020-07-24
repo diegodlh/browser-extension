@@ -11,10 +11,13 @@ function loadOptions() {
     {
       badge: true,
       adderToolbarFooter: false,
+      enableExperimentalNewNoteButton: false,
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
       document.getElementById('adderToolbarFooter').checked = items.adderToolbarFooter;
+      document.getElementById('enableExperimentalNewNoteButton'
+        ).checked = items.enableExperimentalNewNoteButton;
     }
   );
 }
@@ -25,5 +28,11 @@ document.getElementById('badge').addEventListener('click', saveOptions);
 document.getElementById('adderToolbarFooter').addEventListener('click', (e) => {
   chrome.storage.sync.set({
     adderToolbarFooter: e.target.checked,
+  })
+});
+
+document.getElementById('enableExperimentalNewNoteButton').addEventListener('click', (e) => {
+  chrome.storage.sync.set({
+    enableExperimentalNewNoteButton: e.target.checked,
   })
 });
