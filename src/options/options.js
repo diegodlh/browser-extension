@@ -3,7 +3,6 @@
 function saveOptions() {
   chrome.storage.sync.set({
     badge: document.getElementById('badge').checked,
-    openSidebar: document.getElementById('openSidebar').checked,
   });
 }
 
