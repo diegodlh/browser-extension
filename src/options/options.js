@@ -14,6 +14,7 @@ function loadOptions() {
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
+      document.getElementById('transparentToolbarButtons').checked = items.transparentToolbarButtons;
     }
   );
 }
