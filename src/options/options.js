@@ -13,6 +13,7 @@ function loadOptions() {
       adderToolbarFooter: false,
       enableExperimentalNewNoteButton: false,
       openSidebar: false,
+      transparentToolbarButtons: false
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
@@ -30,6 +31,12 @@ document.getElementById('badge').addEventListener('click', saveOptions);
 document.getElementById('adderToolbarFooter').addEventListener('click', (e) => {
   chrome.storage.sync.set({
     adderToolbarFooter: e.target.checked,
+  })
+});
+
+document.getElementById('transparentToolbarButtons').addEventListener('click', (e) => {
+  chrome.storage.sync.set({
+    transparentToolbarButtons: e.target.checked,
   })
 });
 
