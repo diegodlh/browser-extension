@@ -21,6 +21,7 @@ function loadOptions() {
       document.getElementById('enableExperimentalNewNoteButton'
         ).checked = items.enableExperimentalNewNoteButton;
       document.getElementById('openSidebar').checked = items.openSidebar;
+      document.getElementById('transparentToolbarButtons').checked = items.transparentToolbarButtons;
     }
   );
 }
