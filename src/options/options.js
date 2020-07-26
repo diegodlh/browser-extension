@@ -10,7 +10,7 @@ function loadOptions() {
   chrome.storage.sync.get(
     {
       badge: true,
-      adderToolbarFooter: false,
+      adderToolbarFooter: 'never',
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
@@ -22,8 +22,9 @@ function loadOptions() {
 document.addEventListener('DOMContentLoaded', loadOptions);
 document.getElementById('badge').addEventListener('click', saveOptions);
 
-document.getElementById('adderToolbarFooter').addEventListener('click', (e) => {
+document.getElementById('adderToolbarFooter').addEventListener('change', (e) => {
+  console.log(e.target.value)
   chrome.storage.sync.set({
-    adderToolbarFooter: e.target.checked,
+    adderToolbarFooter: e.target.value,
   })
 });

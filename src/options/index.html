@@ -28,8 +28,12 @@
       Reload the tabs you are annotating for changes to take effect.
     </p>
 
-    <input type="checkbox" id="adderToolbarFooter">
-    <label for="adderToolbarFooter">Display current group name below the annotation adder</label><br>
+    <label for="adderToolbarFooter">Display current group name below the annotation adder</label>
+    <select id="adderToolbarFooter">
+      <option value="always">Always</option>
+      <option value="exceptPublic">Except Public</option>
+      <option value="never" selected>Never</option>
+    </select><br>
 
     <script src="options.js"></script>
   </main>
