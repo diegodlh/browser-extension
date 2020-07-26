@@ -10,7 +10,7 @@ function loadOptions() {
   chrome.storage.sync.get(
     {
       badge: true,
-      transparentToolbarButtons: false
+      transparentToolbarButtons: false,
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
