@@ -11,6 +11,7 @@ function loadOptions() {
     {
       badge: true,
       adderToolbarFooter: false,
+      usePdfWhiteOverlay: false,
       enableExperimentalNewNoteButton: false,
       openSidebar: false,
       transparentToolbarButtons: false,
@@ -18,6 +19,7 @@ function loadOptions() {
     function (items) {
       document.getElementById('badge').checked = items.badge;
       document.getElementById('adderToolbarFooter').checked = items.adderToolbarFooter;
+      document.getElementById('usePdfWhiteOverlay').checked = items.usePdfWhiteOverlay;
       document.getElementById('enableExperimentalNewNoteButton'
         ).checked = items.enableExperimentalNewNoteButton;
       document.getElementById('openSidebar').checked = items.openSidebar;
@@ -32,6 +34,12 @@ document.getElementById('badge').addEventListener('click', saveOptions);
 document.getElementById('adderToolbarFooter').addEventListener('click', (e) => {
   chrome.storage.sync.set({
     adderToolbarFooter: e.target.checked,
+  })
+});
+
+document.getElementById('usePdfWhiteOverlay').addEventListener('click', (e) => {
+  chrome.storage.sync.set({
+    usePdfWhiteOverlay: e.target.checked,
   })
 });
 
