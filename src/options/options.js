@@ -13,7 +13,7 @@ function loadOptions() {
       adderToolbarFooter: false,
       enableExperimentalNewNoteButton: false,
       openSidebar: false,
-      transparentToolbarButtons: false
+      transparentToolbarButtons: false,
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
