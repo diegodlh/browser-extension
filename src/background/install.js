@@ -84,6 +84,9 @@ if (chrome.runtime.onMessage) {
         auth(request, sendResponse);
         return true;
         break;
+      case 'openOptionsPage':
+        chrome.runtime.openOptionsPage();
+        break;
     }
   });
 }
