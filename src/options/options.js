@@ -14,7 +14,7 @@ function loadOptions() {
     },
     function (items) {
       document.getElementById('badge').checked = items.badge;
-      document.getElementById('adderToolbarFooter').checked = items.adderToolbarFooter;
+      document.getElementById('adderToolbarFooter').value = items.adderToolbarFooter;
     }
   );
 }
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', loadOptions);
 document.getElementById('badge').addEventListener('click', saveOptions);
 
 document.getElementById('adderToolbarFooter').addEventListener('change', (e) => {
-  console.log(e.target.value)
   chrome.storage.sync.set({
     adderToolbarFooter: e.target.value,
   })
