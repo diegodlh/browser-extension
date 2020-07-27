@@ -113,7 +113,7 @@ function onInstalled(installDetails) {
   }
 
   if (installDetails.reason === 'update') {
-    if (installDetails.previousVersion < 'v1.470.0.1') {
+    if (installDetails.previousVersion < '1.470.0.1') {
       const url = browser.runtime.getURL('help/new-features.html');
       chrome.tabs.create({ url });
     }
