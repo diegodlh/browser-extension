@@ -20,6 +20,13 @@ To install on your Firefox browser, download the latest xpi file from [here](htt
 
 [service]: https://hypothes.is
 
+Extra features
+-----------
+As of v1.470.0.1, the Unofficial extension for Hypothesis enables some customization
+of the annotation client. Read more about it [here][extra-features].
+
+[extra-features]: docs/extra-features.md
+
 Known bugs
 -----------
 
