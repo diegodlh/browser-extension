@@ -44,14 +44,15 @@ Please, star it here and review it on [AMO][amo].
 
 **Did you find a bug?**
 
-Please, report it [here](issues)!
+Please, report it [here][issues]!
 
 **Do you have suggestions, or ideas for new features?**
 
-I’ll be happy to hear about them! Let’s discuss them [here](issues).
+I’ll be happy to hear about them! Let’s discuss them [here][issues].
 
 [amo]: https://addons.mozilla.org/en-US/firefox/addon/unofficial-hypothesis/
 [donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z96DVUZGG3ZKU&source=url
+[issues]: https://github.com/diegodlh/unofficial-hypothesis-extension/issues
 
 Development
 -----------
